@@ -273,8 +273,14 @@ class MY_Gallery {
         this.modalPic = document.createElement("img");
         this.modalPic.id = "Gallery_Show_Modal_Img";
         this.modalPic.src = "";
-        this.modalPic.style.height = "95%";
-        this.modalPic.style.maxWidth = (this.w * 0.95) + "px";
+        if (this.w < 540) {
+            this.modalPic.style.maxHeight = (this.h * 0.95) + "px";
+            this.modalPic.style.width = "95%";
+        } else {
+            this.modalPic.style.height = "95%";
+            this.modalPic.style.maxWidth = (this.w * 0.95) + "px";
+        }
+
         this.modalPic.style.position = "absolute";
         this.modalPic.style.left = "50%";
         this.modalPic.style.top = "50%";
