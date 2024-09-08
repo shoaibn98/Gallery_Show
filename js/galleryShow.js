@@ -41,7 +41,8 @@ class MY_Gallery {
         this.insideDiv.style.transform = "translate(-50%, -50%)";
         this.insideDiv.style.width = (this.w * 0.9) + "px";
         this.insideDiv.style.height = (this.h * 0.9) + "px";
-        this.insideDiv.style.backgroundColor = "black";
+        this.insideDiv.style.backgroundColor = "rgba(0,0,0,0.75)";
+        this.insideDiv.style.border = "15px";
         this.insideDiv.style.overflow = "hidden";
 
         this.bubble = document.createElement("div");
