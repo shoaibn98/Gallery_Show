@@ -18,8 +18,6 @@ class MY_Gallery {
             this.createPages(i);
         }
         this.createModalShow();
-
-
         this.fadeOtherPage();
     }
 
