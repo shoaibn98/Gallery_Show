@@ -126,6 +126,8 @@ class MY_Gallery {
             document.getElementById("Gallery_Show_A_4").href = `https://twitter.com/share?url=${encodeURIComponent(self.options.data[i].src)}`
             document.getElementById("Gallery_Show_A_5").href = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(self.options.data[i].src)}`
             document.getElementById("Gallery_Show_A_3").href = `https://api.whatsapp.com/send?text=${encodeURIComponent(self.options.data[i].src)}`
+            document.getElementById("Gallery_Show_A_6").href = self.options.data[i].src
+            document.getElementById("Gallery_Show_A_6").setAttribute("download", "true")
 
 
         }
@@ -341,11 +343,17 @@ class MY_Gallery {
         a5.id = "Gallery_Show_A_5";
         a5.innerHTML = "<i class='fab fa-pinterest' ></i>"
 
+        var a6 = document.createElement("a");
+        a6.id = "Gallery_Show_A_6";
+        a6.innerHTML = "<i class='fas fa-download' ></i>"
+
+
         shareDiv.appendChild(a1);
         shareDiv.appendChild(a2);
         shareDiv.appendChild(a3);
         shareDiv.appendChild(a4);
         shareDiv.appendChild(a5);
+        shareDiv.appendChild(a6);
 
         this.divInsideModal.appendChild(this.modalPic);
         this.divInsideModal.appendChild(closBtn);
@@ -358,7 +366,7 @@ class MY_Gallery {
 
 
 
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 6; i++) {
             var el = document.getElementById("Gallery_Show_A_" + i);
             el.style.color = "#fff";
             el.style.fontSize = "24px";
@@ -381,7 +389,7 @@ class MY_Gallery {
             }
 
             if (!self.shareBtnShow) {
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 6; i++) {
                     document.getElementById("Gallery_Show_A_" + i).animate([
                         { transform: "translateY(0px) rotateZ(0deg)", opacity: 0 },
                         { transform: "translateY(-" + (35 * i) + "px) rotateZ(360deg)", opacity: 1 }
@@ -391,7 +399,7 @@ class MY_Gallery {
 
                 self.shareBtnShow = true;
             } else {
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 6; i++) {
                     document.getElementById("Gallery_Show_A_" + i).animate([
 
                         { transform: "translateY(-" + (35 * i) + "px) rotateZ(360deg)", opacity: 1 },
