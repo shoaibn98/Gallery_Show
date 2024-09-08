@@ -57,10 +57,7 @@ class MY_Gallery {
         this.bubble.style.alignItems = "center";
         this.bubble.style.justifyContent = "center";
         this.bubble.style.zIndex = 99;
-
-
         this.refreshBubble();
-
         this.gallery.appendChild(this.bubble);
         this.gallery.appendChild(this.insideDiv);
     }
