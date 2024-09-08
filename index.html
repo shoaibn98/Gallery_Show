@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Test</title>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/055d29e5e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background: black;">
+
+    <div id="MY_Gallery">
+
+    </div>
+
+    <script>
+        var options = {
+            data: [{
+                "src": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+                "title": "Sunset Over the Mountains"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "City Skyline at Night"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+                "title": "Forest Trail in Autumn"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "Calm Beach with Clear Waters"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487001000640-6f12285676a0",
+                "title": "Snow-covered Peaks"
+            }, {
+                "src": "https://images.unsplash.com/photo-1499346030926-9a72daac6c63",
+                "title": "Lone Tree in the Desert"
+            }, {
+                "src": "https://images.unsplash.com/photo-1495078065017-5647237c9d79",
+                "title": "Rainy Street at Night"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487758608033-8eb0be8e346d",
+                "title": "Golden Wheat Field"
+            }, {
+                "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+                "title": "Misty Forest"
+            }, {
+                "src": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+                "title": "Mountain Range Under Clouds"
+            }, {
+                "src": "https://images.unsplash.com/photo-1488502550088-6185c0cc0b2f",
+                "title": "Rocky Coastline"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+                "title": "Wild River in Forest"
+            }, {
+                "src": "https://images.unsplash.com/photo-1485796826113-174aa68fd81b",
+                "title": "Sunrise in the Mountains"
+            }, {
+                "src": "https://images.unsplash.com/photo-1499241006658-02f41ff55e9b",
+                "title": "Snowy Path in the Woods"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "Desert Dunes at Sunset"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487017931015-0ec4f1f3907d",
+                "title": "Clear Lake with Reflections"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
+                "title": "Autumn Leaves"
+            }, {
+                "src": "https://images.unsplash.com/photo-1485736864440-efec5f6b52b6",
+                "title": "Frozen Lake"
+            }, {
+                "src": "https://images.unsplash.com/photo-1485285244406-015d7b8f1b33",
+                "title": "Vibrant Sunset"
+            }, {
+                "src": "https://images.unsplash.com/photo-1494858632909-0e542554b2b9",
+                "title": "City Street at Dusk"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+                "title": "Waterfall in the Forest"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "Mountain Valley"
+            }, {
+                "src": "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9",
+                "title": "Calm Ocean at Sunrise"
+            }, {
+                "src": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+                "title": "Snow-capped Mountains"
+            }, {
+                "src": "https://images.unsplash.com/photo-1485510469060-2513adaeebd2",
+                "title": "Dense Forest"
+            }, {
+                "src": "https://images.unsplash.com/photo-1496217590455-aa8f7f2c6aa2",
+                "title": "Sunset on the Beach"
+            }, {
+                "src": "https://images.unsplash.com/photo-1497146186473-4394e7e5f50c",
+                "title": "City Lights at Night"
+            }, {
+                "src": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+                "title": "Snowy Mountain Pass"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487017931015-0ec4f1f3907d",
+                "title": "River Through Canyon"
+            }, {
+                "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+                "title": "Autumn Forest"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "Rocky Shoreline"
+            }, {
+                "src": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+                "title": "Desert Landscape"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
+                "title": "Rolling Hills"
+            }, {
+                "src": "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9",
+                "title": "Quiet River"
+            }, {
+                "src": "https://images.unsplash.com/photo-1485285244406-015d7b8f1b33",
+                "title": "Mountain Peak"
+            }, {
+                "src": "https://images.unsplash.com/photo-1485736864440-efec5f6b52b6",
+                "title": "Snowy Forest Path"
+            }, {
+                "src": "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9",
+                "title": "Golden Beach"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+                "title": "Sunset Over Lake"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "Stormy Sky"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487758608033-8eb0be8e346d",
+                "title": "Winding River"
+            }, {
+                "src": "https://images.unsplash.com/photo-1494858632909-0e542554b2b9",
+                "title": "Sunrise in the Valley"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487758608033-8eb0be8e346d",
+                "title": "Forest Path"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "Calm Bay"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
+                "title": "Rocky Mountains"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
+                "title": "Quiet Village"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+                "title": "Misty Lake"
+            }, {
+                "src": "https://images.unsplash.com/photo-1506747600003-291d53fb62e9",
+                "title": "Sunset in the Forest"
+            }, {
+                "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+                "title": "Desert Road"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487758608033-8eb0be8e346d",
+                "title": "Mountain View"
+            }, {
+                "src": "https://images.unsplash.com/photo-1487758608033-8eb0be8e346d",
+                "title": "Forest Clearing"
+            }],
+            name: "",
+            noInEachPage: 15,
+            rowNo: 5,
+            columnNo: 3,
+            galleryId: "MY_Gallery"
+
+
+        }
+        var mg = new MY_Gallery(options)
+    </script>
+</body>
+
+</html>
