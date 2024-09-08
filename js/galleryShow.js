@@ -42,7 +42,6 @@ class MY_Gallery {
         this.insideDiv.style.width = (this.w * 0.9) + "px";
         this.insideDiv.style.height = (this.h * 0.9) + "px";
         this.insideDiv.style.backgroundColor = "rgba(0,0,0,0.75)";
-        this.insideDiv.style.borderRadius = "15px";
         this.insideDiv.style.overflow = "hidden";
 
         this.bubble = document.createElement("div");
@@ -82,7 +81,7 @@ class MY_Gallery {
         page.style.flexWrap = "wrap";
         page.style.alignItems = "center";
         page.style.backgroundColor = "rgba(0,0,0,0.75)";
-        page.style.borderRadius = "15px";
+
         page.style.zIndex = 99;
 
         page.id = "MY_Gallery_page_" + i;
