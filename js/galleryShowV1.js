@@ -99,7 +99,7 @@ class MY_Gallery {
     createPic(i) {
         var self = this;
         var pic = document.createElement("img");
-        pic.src = this.options.data[i].src;
+        pic.src = this.options.data[i].tempSrc;
         pic.style.width = ((this.w * 0.9 / this.options.columnNo) - 20) + "px";
         pic.style.height = ((this.h * 0.9 / this.options.rowNo) - 20) + "px";
         pic.style.margin = "10px";
