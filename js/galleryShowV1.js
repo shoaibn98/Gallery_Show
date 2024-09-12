@@ -127,6 +127,8 @@ class MY_Gallery {
             document.getElementById("Gallery_Show_A_6").href = self.options.data[i].src
             document.getElementById("Gallery_Show_A_6").setAttribute("download", "true")
 
+            document.getElementById("Gallery_Show_A_7").setAttribute("data-src", self.options.data[i].src);
+
 
         }
 
@@ -352,6 +354,12 @@ class MY_Gallery {
         a6.innerHTML = "<i class='fas fa-download' ></i>"
 
 
+        var a7 = document.createElement("div");
+        a7.id = "Gallery_Show_A_7";
+        a7.innerHTML = "<i class='fas fa-trash-alt' ></i>"
+
+
+
         shareDiv.appendChild(a1);
         shareDiv.appendChild(a2);
         shareDiv.appendChild(a3);
@@ -363,6 +371,7 @@ class MY_Gallery {
         this.divInsideModal.appendChild(closBtn);
         this.divInsideModal.appendChild(shareBtn);
         this.divInsideModal.appendChild(shareDiv);
+        this.divInsideModal.appendChild(a7);
 
         this.myModal.appendChild(this.divInsideModal);
 
@@ -370,7 +379,7 @@ class MY_Gallery {
 
 
 
-        for (let i = 1; i <= 6; i++) {
+        for (let i = 1; i <= 7; i++) {
             var el = document.getElementById("Gallery_Show_A_" + i);
             el.style.color = "#fff";
             el.style.fontSize = "24px";
@@ -380,8 +389,22 @@ class MY_Gallery {
             el.style.opacity = "0";
             el.style.textShadow = "1px 1px 2px #000, -1px -1px 2px #000";
             el.style.zIndex = 199;
-            el.setAttribute("target", "_blank");
 
+
+            if (i == 7) {
+                el.style.fontSize = "20px";
+                el.style.color = "red";
+                el.style.display = "none";
+                el.style.cursor = "pointer";
+                el.style.opacity = "1";
+                if (this.options.showDelBtn) {
+                    el.style.display = "block";
+                }
+                el.style.left = "25px";
+                el.style.bottom = "10px";
+            } else {
+                el.setAttribute("target", "_blank");
+            }
         }
 
         shareBtn.onclick = function(e) {
